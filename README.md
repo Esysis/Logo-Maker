@@ -23,6 +23,9 @@
 
   To use the Logo maker right click the index.js file and click copy relative path. Once copied open up your terminal and type out "node *paste copied path*" after you run that you will be given prompts answer as you want and get your logo!
 
+  ## Usage Video
+  https://drive.google.com/file/d/1J_-bKSKP9Ja2W5fAJjKzOcx60NeKRi2c/view
+
   ## Contributing
 
   You can easily add more customization to the logos in the index.js for more in-depth logos.
@@ -43,5 +46,8 @@
   This project is licensed under the MIT license. 
 * [License](#license)
 
+  ## Repo Link
+
+  https://github.com/Esysis/Logo-Maker
 
   

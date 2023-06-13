@@ -36,3 +36,27 @@ function getLogoData() {
     ]);
   }
   
+  getLogoData().then((answers) => {
+    const { text, textColor, shape, shapeColor } = answers;
+  
+    const svgContent = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+        ${shapes[shape].replace('REPLACE_COLOR', shapeColor)}
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="48">${text}</text>
+      </svg>
+    `;
+    const dir = './examples';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+    
+    fs.writeFile(`${dir}/logo.svg`, svgContent, function(err) {
+        if(err) {
+          return console.log(err);
+        }
+    
+        console.log(`Generated ${dir}/logo.svg`);
+    });
+    
+  });
+  
